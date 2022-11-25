@@ -1,0 +1,144 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+button, summary {
+	cursor: pointer;
+}
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text:#111;
+	--color-background:#fff;
+	--color-navbar: #1d1d1f;
+	--color-navbar-text: #eee;
+	--color-background-grey: #f5f5f7;
+}
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+/* jouw code */
+
+/* eerste navbar bovenaan */
+nav{
+	background-color: var(--color-navbar);
+	color: var(--color-navbar-text);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 3em;
+	width: 100%;
+}
+
+nav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+}
+
+nav li:nth-child(3) {
+    margin-right: 1em;
+}
+
+/* de 2de navbar met alle items erin */
+nav:nth-child(2) {
+    background-color: black;
+	margin-top: 50px;
+	height: auto;
+}
+
+body{
+	background-color: var(--color-background-grey);
+}
+
+/* zorgd ervoor dat de text van de paragraven in het midden komt te staan */
+section p{
+	text-align: center;
+}
+
+/* section 1: apple event */
+section:nth-of-type(1) p:nth-of-type(1) {
+	margin-top: 220px;		
+	margin-left: 3em;
+	margin-right: 3em;
+}
+
+
+/* section 2: iphone 14 */
+section:nth-of-type(2){
+	background-color: var(--color-background);
+}
+
+section:nth-of-type(2) img:nth-of-type(1){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+section:nth-of-type(2) img:nth-of-type(2){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	height: 50%;	
+}
+
+
+/* sectiom 3: iphone 14 pro */
+section:nth-of-type(3){
+	background-color: black;
+	color: white;
+}
+
+section:nth-of-type(3) img:nth-of-type(1){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	height: 50%;	
+}
+
+/* section 4: iphone se  */
+section:nth-of-type(4){
+	background-color: var(--color-background);
+}
+
+section:nth-of-type(4) img:nth-of-type(1){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	height: 50%;	
+}
+
+/* section 5: iphone vergelijking grid  */
+
+
+/* section 6: geef WOW */
+section:nth-of-type(6){
+	background-color: var(--color-background);
+}
+
+section:nth-of-type(6) img:nth-of-type(2){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	height: 50%;	
+}
+
+
+
