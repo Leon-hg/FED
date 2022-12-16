@@ -3,14 +3,17 @@
 /**************/
 *, *::after, *::before {
   box-sizing:border-box;  
+  margin: 0;
+  padding: 0;
 }
 
 button, summary {
 	cursor: pointer;
 }
 
-
-
+img {
+	width: 100%;
+}
 
 
 /*********************/
@@ -19,16 +22,2228 @@ button, summary {
 :root {
 	/* startje */
 	--color-text:#111;
-	--color-background:#eee;
+	--color-background:#fff;
+	--color-background-grey: #f5f5f7;
+	--color-background-black: #111;
+	--color-navbar-ingeklapt: rgba(0,0,0,0.92);
+	--color-navbar-uitgeklapt: #000000;
+	--color-navbar-text: #f5f5f7;
+	--color-meer-info: #06c;
+	--color-meer-info-donker: #2997ff;
+
+	--footer-background: #f5f5f7;
+    --footer-border-color: #d2d2d7;
+    --footer-text-color: #6e6e73;
+    --footer-link-color: #424245;
+}
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+/* jouw code */
+
+header{
+	min-height:4em;
+	padding:0 1em;
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--color-navbar-ingeklapt);
+	inset: 0;
+	/* position: fixed; */
+
+}
+
+header.toonMenu{
+	display: flex;
+	position: relative;
+}
+
+header button:nth-of-type(2){
+	padding: 0;
+	border: none;
+	background: none;
+}
+
+header button{
+	padding: 0;
+	border: none;
+	background: none;
+}
+
+
+.firstNav button{
+	justify-self: start;
+	padding: 0;
+	border: none;
+	background: none;}
+
+.firstNav {
+	/* padding:1em; */
+	display:grid;
+	align-content:start;
+	gap:1em;
+	background-color: var(--color-navbar-ingeklapt);
+	position: fixed;
+	inset: 0; 
+	margin-bottom: 0 0 1 0;
+	transform: translateY(-100%);
+	transition: 0.3s;
+  }
+
+
+/* als menu open is */
+.firstNav.toonMenu {
+	transform: translateY(0);
+	background-color: #0000;
+	z-index: 2;
+}
+
+.firstNav.toonMenu ul{
+	margin-top: 4em;
+}
+
+/* de stijl van de nieuw tekst */
+.nieuwTekst{
+	font-size: .75em;
+	color: #6e6e73;
+	margin-top: 7em;
+}
+
+/* de styling van de vanaf: tekst  */
+.vanafTekst{
+	font-size: 1.1em;
+	color: #1D1D1f;
+	padding-top: 2em;
+}
+
+.titel{
+	font-size: 2em;
+	margin: 1em 0em;
+}
+
+.tekst{
+	font-size: 1.1em;
+	margin: 1.25em 25%;
+}
+
+/* de stijling van de algemene koop knop */
+.koopButton{
+	text-decoration: none;
+	font-size: 1.1em;
+	padding: .5em 1em;
+	border-radius: 61.25em;
+	background-color: rgb(0, 113, 227);
+	color: white;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+	margin-top: 1.5em;
+}
+
+
+/*******************/
+/* LIJST MET LINKS */
+/*******************/
+.firstNav ul { 
+	margin:0; 
+	padding-left: 10%;
+	padding-right: 10%;
+	list-style:none;
+	background-color: var(--color-navbar-uitgeklapt);
+	color: var(--color-navbar-text);
+	position: absolute;
+	inset: 0em 0em 45em 0em;
+	margin-top: .6em;
+
+}
+
+.firstNav .toonMenu ul li{
+	border-bottom: solid rgba(255,255,255,0.24);
+	font-size: 1em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	color: var(--color-navbar-text);
+}
+
+.firstNav ul li{
+	height: 1em;
+	font-size: 1em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	color: var(--color-navbar-text);
+}
+
+.firstNav ul li input{
+	width: 100%;
+	height: 2em;
+	font-size: 1em;
+	background-color: darkgray;
+	color: white;
+	padding: 1em;
+	border-radius: 1em;
+}
+
+/* de 2de navbar met alle items erin */
+.secondNav {
+    background-color: var(--color-background);
+	display:grid;
+	align-content:normal;
+	position: relative;
+	z-index: 1;
+}
+
+.secondNav ul{
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	align-items: center;
+	overflow: scroll;
+	justify-content: center;;
+}
+
+.secondNav li a{
+	padding: 1em;
+	text-decoration: none;
+	border-bottom: none;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-decoration: none;
+	color: black;
+}
+
+
+.secondNav li a img{
+	height: 3em;
+	width: auto;
+
+}
+
+.secondNav li p{
+	font-size: .75em;
+
+}
+
+body{
+	background-color: var(--color-background-grey);
+	font-family: 'SF Pro Text','SF Pro Icons','Helvetica Neue','Helvetica','Arial','sans-serif';
+}
+
+.naastElkaar{
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	gap: 1em;
+}
+
+.homepage section {
+	margin-bottom: 1em;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+}
+
+/* zorgd ervoor dat de text van de paragraven in het midden komt te staan */
+.homepage section p{
+	text-align: center;
+}
+
+div:nth-of-type(1){
+	display: flex;
+	flex-direction: column;
+}
+
+/* .homepage section 1: apple event */
+.homepage section:nth-of-type(1) p:nth-of-type(1) {
+	margin-left: 3em;
+	margin-right: 3em;
+	color: #1d1d1f;
+	font-size: .875em;
+	padding: 1em 0em;
+}
+
+
+/* .homepage section 2: iphone 14 */
+.homepage section:nth-of-type(2){
+	background-color: var(--color-background);
+}
+
+.homepage section:nth-of-type(2) p:nth-of-type(2){
+	background-image: linear-gradient(90deg,#2ca2b4,#5598de 24%,#7f87ff 45%,#f65aad 76%,#ec3d43);
+
+	/* vraag aan robert */
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 2.75em;
+}
+
+.homepage section:nth-of-type(2) img:nth-of-type(1){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 1em;
+	width: 4.94em;
+}
+
+.homepage section:nth-of-type(2) img:nth-of-type(2){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 33em;
+	height: 30em;
+	padding-top: 2em;
+}
+
+.homepage section:nth-of-type(2) a:nth-of-type(1){
+	width: 50%;
+}
+
+.homepage section:nth-of-type(2) a:nth-of-type(2){
+	color: var(--color-meer-info);
+	text-decoration: none;
+	font-size: 1.2em;
+	margin-bottom: 2.25em;
+}
+
+
+/* sectiom 3: iphone 14 pro */
+.homepage section:nth-of-type(3){
+	background-color: black;
+	color: white;
+}
+
+.homepage section:nth-of-type(3) p:nth-of-type(3){
+	background-image: linear-gradient(180deg,#ffb6ff,#b344ff);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 2.75em;
+	font-weight: bold;
+	padding-top: .4em;
+	padding-bottom: .4em;
+}
+
+.homepage .homepage section:nth-of-type(3) img:nth-of-type(1){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	height: 50%;	
+}
+
+.homepage section:nth-of-type(3) img:nth-of-type(1){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	width: 17.3em;
+	height: 21em;
+}
+
+.homepage section:nth-of-type(3) a:nth-of-type(1){
+	width: 50%;
+}
+
+.homepage section:nth-of-type(3) a:nth-of-type(2){
+	color: var(--color-meer-info);
+	text-decoration: none;
+	font-size: 1.2em;
+	margin-bottom: 2.25em;
+}
+
+
+/* .homepage section 4: iphone se  */
+.homepage section:nth-of-type(4){
+	background-color: var(--color-background);
+	margin-bottom: 0em;
+}
+
+
+.homepage section:nth-of-type(4) p:nth-of-type(1){
+	font-size: 2.75em;
+	background-image: linear-gradient(90deg,#1e3791 0%,#2948b1 40%,#3153c6 55%,#385fda 60%);;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: bold;
+	padding-top: .4em;
+	padding-bottom: .4em;
+}
+
+.homepage section:nth-of-type(4) img:nth-of-type(1){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 4.8em;
+	height: 1.1em;	
+}
+
+.homepage section:nth-of-type(4) img:nth-of-type(2){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 17.625em;
+	height: 29.375em;
+}
+
+.homepage section:nth-of-type(4) a:nth-of-type(2){
+	color: var(--color-meer-info);
+	text-decoration: none;
+	font-size: 1.2em;
+	margin-bottom: 2.25em;
+}
+
+
+/* .homepage section 5: iphone vergelijking grid  */
+.homepage section:nth-of-type(5){
+	background-color: var(--color-background);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: .5em;
+	justify-items: center;
+
+}
+
+/* eerste column */
+.homepage section:nth-of-type(5) img:nth-of-type(1){
+	width: 9.438em;
+	height: 12.75em;	
+	margin-top: 3em;
+	grid-row-start: 1;
+	grid-column-start: 1;
+}
+
+.homepage section:nth-of-type(5) img:nth-of-type(2){
+	width: 5.75em;
+	height: 1.2em;	
+	grid-row-start: 2;
+	grid-column-start: 1;
+}
+
+.homepage section:nth-of-type(5) img:nth-of-type(3){
+	width: 8.562em;
+	height: 1.25em;	
+	grid-row-start: 3;
+	grid-column-start: 1;
+}
+
+.homepage section:nth-of-type(5) p:nth-of-type(1){	
+	grid-row-start: 4;
+	grid-column-start: 1;
+}
+
+.homepage section:nth-of-type(5) p:nth-of-type(2){	
+	grid-row-start: 5;
+	grid-column-start: 1;
+}
+
+.homepage section:nth-of-type(5) a:nth-of-type(1){
+	text-decoration: none;
+	font-size: .75em;
+	padding: .5em 1em;
+	border-radius: 61.25em;
+	border: none;
+	background-color: rgb(0, 113, 227);
+	color: white;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+	margin-top: 1.5em;
+	grid-row-start: 6;
+	grid-column-start: 1;
+}
+
+.homepage section:nth-of-type(5) a:nth-of-type(2){
+	color: var(--color-meer-info);
+	text-decoration: none;
+	font-size: .875em;
+	margin-bottom: .75em;
+	grid-row-start: 7;
+	grid-column-start: 1;
+	padding-bottom: 2.2em;
+    border-bottom: 0.0625em solid #d2d2d7;
+}
+
+
+
+/* tweede  column */
+.homepage section:nth-of-type(5) img:nth-of-type(4){
+	width: 8.9375em;
+	height: 12.75em;
+	margin-top: 3em;
+	grid-row-start: 1;
+	grid-column-start: 2;
+}
+
+.homepage section:nth-of-type(5) img:nth-of-type(5){
+	width: 7.125em;
+	height: 1.125em;
+	grid-row-start: 2;
+	grid-column-start: 2;	
+}
+
+.homepage section:nth-of-type(5) img:nth-of-type(6){
+	width: 6.125em;
+	height: 1.25em;
+	grid-row-start: 3;
+	grid-column-start: 2;	
+}
+
+.homepage section:nth-of-type(5) p:nth-of-type(3){	
+	grid-row-start: 4;
+	grid-column-start: 2;
+}
+
+.homepage section:nth-of-type(5) p:nth-of-type(4){	
+	grid-row-start: 5;
+	grid-column-start: 2;
+}
+
+.homepage section:nth-of-type(5) a:nth-of-type(3){
+	text-decoration: none;
+	font-size: .75em;
+	padding: .5em 1em;
+	border-radius: 61.25em;
+	border: none;
+	background-color: rgb(0, 113, 227);
+	color: white;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+	margin-top: 1.5em;
+	grid-row-start: 6;
+	grid-column-start: 2;
+}
+
+.homepage section:nth-of-type(5) a:nth-of-type(4){
+	color: var(--color-meer-info);
+	text-decoration: none;
+	font-size: .875em;
+	margin-bottom: .75em;
+	grid-row-start: 7;
+	grid-column-start: 2;
+	padding-bottom: 2.1875em;
+    border-bottom: 0.0625em solid #d2d2d7;
+}
+
+
+
+/* derder column */
+.homepage section:nth-of-type(5) img:nth-of-type(7){
+	width: 8em;
+	height: 12.75em;	
+	margin-top: 3em;
+	grid-row-start: 8;
+	grid-column-start: 1;
+}
+
+.homepage section:nth-of-type(5) img:nth-of-type(8){
+	width: 8.5625em;
+	height: 1.125em;	
+	grid-row-start: 9;
+	grid-column-start: 1;
+}
+
+.homepage section:nth-of-type(5) img:nth-of-type(9){
+	width: 6.0625em;
+	height: 1.25em;	
+	grid-row-start: 10;
+	grid-column-start: 1;
+}
+
+.homepage section:nth-of-type(5) p:nth-of-type(5){	
+	grid-row-start: 11;
+	grid-column-start: 1;
+}
+
+.homepage section:nth-of-type(5) p:nth-of-type(6){	
+	grid-row-start: 12;
+	grid-column-start: 1;
+}
+
+.homepage section:nth-of-type(5) a:nth-of-type(5){
+	text-decoration: none;
+	font-size: .75em;
+	padding: .5em 1em;
+	border-radius: 61.25em;
+	border: none;
+	background-color: rgb(0, 113, 227);
+	color: white;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+	margin-top: 1.5em;
+	grid-row-start: 13;
+	grid-column-start: 1;
+}
+
+.homepage section:nth-of-type(5) a:nth-of-type(6){
+	color: var(--color-meer-info);
+	text-decoration: none;
+	font-size: .875em;
+	margin-bottom: .75em;
+	grid-row-start: 14;
+	grid-column-start: 1;
+	padding-bottom: 2.1875em;
+    border-bottom: 0.0625em solid #d2d2d7;
+    margin-bottom: 0;
+}
+
+/* vierde column */
+.homepage section:nth-of-type(5) img:nth-of-type(10){
+	width: 7.4375em;
+	height: 12.75em;
+	margin-top: 3em;
+	grid-row-start: 8;
+	grid-column-start: 2;
+}
+
+.homepage section:nth-of-type(5) img:nth-of-type(11){
+	width: 4.125em;
+	height: 1.125em;	
+	grid-row-start: 9;
+	grid-column-start: 2;
+}
+
+.homepage section:nth-of-type(5) img:nth-of-type(12){
+	width: 6.125em;
+	height: 1.25em;	
+	grid-row-start: 10;
+	grid-column-start: 2;
+}
+
+.homepage section:nth-of-type(5) p:nth-of-type(7){	
+	grid-row-start: 11;
+	grid-column-start: 2;
+}
+
+.homepage section:nth-of-type(5) p:nth-of-type(8){	
+	grid-row-start: 12;
+	grid-column-start: 2;
+}
+
+.homepage section:nth-of-type(5) a:nth-of-type(7){
+	text-decoration: none;
+	font-size: .75em;
+	padding: .5em 1em;
+	border-radius: 61.25em;
+	border: none;
+	background-color: rgb(0, 113, 227);
+	color: white;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+	margin-top: 1.5em;
+	grid-row-start: 13;
+	grid-column-start: 2;
+}
+
+.homepage section:nth-of-type(5) a:nth-of-type(8){
+	color: var(--color-meer-info);
+	text-decoration: none;
+	font-size: .875em;
+	margin-bottom: .75em;
+	grid-row-start: 14;
+	grid-column-start: 2;
+	padding-bottom: 2.1875em;
+    border-bottom: 0.0625em solid #d2d2d7;
+    margin-bottom: 0;
+}
+
+/* .homepage section 6: geef WOW */
+.homepage section:nth-of-type(6){
+	/* background-color: var(--color-background); */
+	background-color: rgb(1, 1, 42);
+
+}
+.homepage section:nth-of-type(6) p:nth-of-type(1){
+	color: white;
+	font-size: 3em;
+}
+
+.homepage section:nth-of-type(6) a:nth-of-type(1){
+	color: var(--color-meer-info-donker);
+	font-size: 1.1em;
+	margin-top: .5625em;
+}
+
+.homepage section:nth-of-type(6) img:nth-of-type(1){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 5.25em;
+	height: 5.25em;	
+}
+
+.homepage section:nth-of-type(6) img:nth-of-type(2){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 20em;
+	height: 20em;	
+}
+
+
+/* .homepage section 7: Zo Koop je een iPhone  */
+
+
+
+/* .homepage section 8: ruil je smartphone in voor een tegoed */
+.homepage section:nth-of-type(8){
+	background-color: var(--color-background);
+}
+
+.homepage section:nth-of-type(8) p:nth-of-type(1){
+	margin: 2.5em;
+}
+
+.homepage section:nth-of-type(8) p:nth-of-type(2){
+	font-size: 1.1em;
+	margin: 1.25em 25%;
+}
+
+.homepage section:nth-of-type(8) img:nth-of-type(1){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 15.3125em;
+	height: 12.5625em;	
+}
+
+.homepage section:nth-of-type(8) a:nth-of-type(1){
+	color: var(--color-meer-info);
+	text-decoration: none;
+	font-size: 1.1875em;
+	margin-top: .8125em;
+	margin-bottom: 2.25em;
+}
+
+
+/* .homepage section 9: waarom je iphone */
+
+.homepage section:nth-of-type(9){
+	/* background-image: url("./images/body/why_apple__ezn1ktvka6oi_large.jpg"); */
+	background-image: url("../images/body/why_apple__ezn1ktvka6oi_large.jpg");
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.homepage section:nth-of-type(9) p:nth-of-type(1){
+	margin: 2.5em;
+	font-weight: 5
+	00;
+	margin: 1.25em 25%;
+}
+
+.homepage section:nth-of-type(9) p:nth-of-type(2){
+	font-size: 1.1em;
+	margin: 1.25em 25%;
+}
+
+.homepage section:nth-of-type(9) a:nth-of-type(1){
+	color: var(--color-meer-info);
+	text-decoration: none;
+	font-size: 1.1875em;
+	margin-top: .8125em;
+	margin-bottom: 2.25em;
+}
+
+
+/* .homepage section 10: uitgelichte accessoires */
+
+
+
+/* .homepage section 11: magSave  */
+.homepage section:nth-of-type(11){
+	background-color: var(--color-background);
+}
+
+.homepage section:nth-of-type(11) img:nth-of-type(1){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 14.5625em;
+	height: 11.375em;	
+}
+
+.homepage section:nth-of-type(11) a:nth-of-type(1) {
+    color: var(--color-meer-info);
+    text-decoration: none;
+    font-size: 1.1875em;
+    margin-top: .8125em;
+    margin-bottom: 2.25em;
+}
+
+
+/* .homepage section 12: AirTag */
+.homepage section:nth-of-type(12){
+	background-color: var(--color-background);
+}
+
+.homepage section:nth-of-type(12) img:nth-of-type(1){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;	
+}
+
+.homepage section:nth-of-type(12) a:nth-of-type(1) {
+    color: var(--color-meer-info);
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-top: .8125em;
+    margin-bottom: 2.25em;
+}
+
+.homepage section:nth-of-type(12) a:nth-of-type(2) {
+    color: var(--color-meer-info);
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-top: .8125em;
+    margin-bottom: 2.25em;
+}
+
+
+/* .homepage section 13: airpods  */
+.homepage section:nth-of-type(13){
+	background-color: var(--color-background);
+}
+
+.homepage section:nth-of-type(13) img:nth-of-type(1){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 29.375em;
+	height: 13.8125em;	
+}
+
+.homepage section:nth-of-type(13) a:nth-of-type(1){
+	color: var(--color-meer-info);
+	text-decoration: none;
+	font-size: 1.1875em;
+	margin-bottom: 2.25em;
+}
+
+/* .homepage section 14: bestelling/ bezorging */
+.homepage section:nth-of-type(14) a:nth-of-type(1){
+	color: var(--color-meer-info);
+	text-decoration: none;
+	font-size: 1.3125em;
+	margin-top: 2.25em;
+	margin-bottom: 2.25em;
+}
+
+.homepage section:nth-of-type(14) img:nth-of-type(1){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 3.1875em;
+	height: 4.6875em;	
+}
+
+.homepage section:nth-of-type(14) p:nth-of-type(1){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.1em;
+	font-weight: 600;
+	margin: 1.25em 30%;
+}
+
+.homepage section:nth-of-type(14) p:nth-of-type(2){
+	margin-top: 0em;
+}
+.homepage section:nth-of-type(14) a:nth-of-type(2){
+	color: var(--color-meer-info);
+	text-decoration: none;
+	font-size: 1.1875em;
+	margin-bottom: 2.25em;
+}
+
+.homepage section:nth-of-type(14) img:nth-of-type(2){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 4.4375em;
+	height: 4.6875em;	
+}
+
+.homepage section:nth-of-type(14) p:nth-of-type(3){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.1em;
+	font-weight: 600;
+	margin: 1.25em 30%;
+}
+
+.homepage section:nth-of-type(14) p:nth-of-type(4){
+	margin-top: 0em;
+}
+
+.homepage section:nth-of-type(14) a:nth-of-type(3){
+	color: var(--color-meer-info);
+	text-decoration: none;
+	font-size: 1.1875em;
+	margin-bottom: 2.25em;
+}
+
+/* .homepage section 15: ios 16 */
+.homepage section:nth-of-type(15){
+	background-color: var(--color-background);
+}
+
+.homepage section:nth-of-type(15) p:nth-of-type(1){
+	margin-bottom: .3em;
+}
+
+.homepage section:nth-of-type(15) p:nth-of-type(2){
+	margin-top: 0em;
+}
+
+.homepage section:nth-of-type(15) a:nth-of-type(1){
+	color: var(--color-meer-info);
+	text-decoration: none;
+	font-size: 1.1875em;
+	margin-bottom: 2.25em;
+}
+
+.homepage section:nth-of-type(15) img:nth-of-type(1){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 29.375em;
+	height: 13.8125em;	
+}
+
+/* .homepage section 16: privacy */
+.homepage section:nth-of-type(16){
+	background-color: var(--color-background);
+}
+
+.homepage section:nth-of-type(16) img:nth-of-type(1){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	height: 50%;	
+}
+
+.homepage section:nth-of-type(16){
+	/* background-image: url("./images/body/why_apple__ezn1ktvka6oi_large.jpg"); */
+	background-image: url("../images/body/privacy_update__cc6s1lqakkk2_large.jpg");
+	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.homepage section:nth-of-type(16) p:nth-of-type(1){
+	color: white;
+}
+
+.homepage section:nth-of-type(16) a:nth-of-type(1){
+	color: white;
+	font-size: 1.1em;
+	text-decoration: none;
+	margin-bottom: 16.25em;
+}
+
+
+
+/* .homepage section 17: haal meer uit iphone  */
+
+
+
+/* .homepage section 18: apple one */
+.homepage section:nth-of-type(18){
+	background-color: var(--color-background);
+}
+
+.homepage section:nth-of-type(18) img:nth-of-type(1){
+	display: block;
+	margin-top: 3em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 5.25em;
+	height: 1.75em;	
+}
+
+.homepage section:nth-of-type(18) p:nth-of-type(1){
+	font-size:  1.3125em;
+	font-weight: 600;
+	margin: 1.5625em 0em .9375em;
+}
+
+.homepage section:nth-of-type(18) a:nth-of-type(1){
+	color: var(--color-meer-info);
+	text-decoration: none;
+	font-size: 1.1875em;
+	margin-bottom: 1em;
+}
+
+.homepage section:nth-of-type(18) a:nth-of-type(2){
+	color: var(--color-meer-info);
+	text-decoration: none;
+	font-size: 1.1875em;
+	margin-bottom: 2.25em;
+}
+
+.homepage section:nth-of-type(18) img:nth-of-type(2){
+	display: block;
+	margin-top: 3em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 3em;
+	width: 12.8125em;
+	height: 11.375em;	
+}
+
+/* .homepage section 19: apple tv +  */
+.homepage section:nth-of-type(19){
+	background-color: var(--color-background-black);
+	color: white;
+}
+
+.homepage section:nth-of-type(19) img:nth-of-type(1){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3em;
+	margin-bottom: 1em;
+	width: 4em;
+	height: 1.625em;	
+}
+
+.homepage section:nth-of-type(19) a{
+	color: var(--color-meer-info-donker);
+	text-decoration: none;
+	font-size: 1.1em;
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+
+.homepage section:nth-of-type(19) img:nth-of-type(2){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: 100%;	
+}
+
+
+/* .homepage section 20: apple music */
+.homepage div section:nth-of-type(1){
+	background-color: #C0EEF3;
+}
+
+.homepage div section:nth-of-type(1) img:nth-of-type(1){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 10%;
+	height: 10%;	
+	margin: 3em;
+}
+
+
+.homepage div section:nth-of-type(1) a{
+	color: var(--color-meer-info-donker);
+	text-decoration: none;
+	font-size: 1.1em;
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+
+.homepage div section:nth-of-type(1) img:nth-of-type(2){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+	height: 30%;	
+	margin-bottom: 2em;
+}
+
+
+/* .homepage section 21: apple arcade */
+.homepage section:nth-of-type(21){
+	background-color: var(--color-background);
+}
+
+.homepage section:nth-of-type(21) img:nth-of-type(1){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3em;
+	margin-bottom: 1em;
+	width: 7.25em;
+	height: 1.625em;	
+}
+
+.homepage div section:nth-of-type(2) .naastElkaar{
+	font-size: 1.1em;
+	grid-row-start: 3;
+	grid-column-start: 1;
+	gap: 1em;
+}
+.homepage section:nth-of-type(2) .naastElkaar a:nth-of-type(1){
+	width: 100%;
+	color: var(--color-meer-info);
+	text-decoration: none;
+	font-size: 1.1875em;
+	margin-bottom: 2.25em;
+}
+
+.homepage section:nth-of-type(21) img:nth-of-type(2){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: 100%;	
+}
+
+
+/* .homepage section 22: apple gift card  */
+
+/* veranderd naar nth 20 voor aanpassing div  */
+.homepage section:nth-of-type(20){
+	background-color: var(--color-background);
+}
+
+
+.homepage section:nth-of-type(20) img:nth-of-type(1){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3em;
+	margin-bottom: 1em;
+	width: 8.5em;
+	height: 1.5625em;	
+}
+
+.homepage section:nth-of-type(20) a{
+	color: var(--color-meer-info-donker);
+	text-decoration: none;
+	font-size: 1.1em;
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+
+.homepage section:nth-of-type(20) img:nth-of-type(2){
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	width: 70%;
+	height: 70%;	
+}
+
+
+/* footer algemeen */
+footer{
+	background-color: var(--footer-background);
+}
+
+
+/* footer met behulp van robert */
+/* source van de code: https://codepen.io/robertspier/pen/NWMapEM?editors=0110 */
+details > summary {
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	
+	/* Verberg het pijltje */
+	list-style: none;
+	border-top: 0.0625em solid var(--footer-border-color);
+	padding: 1em;
+	font-size: .75em;
+	color: var(--footer-link-color);
+}
+
+details > summary::after {
+	content: "+";
+	margin-left: auto;
+}
+
+details[open] > summary::after {
+	transform: rotate(45deg);
+}
+
+
+details ul li a{
+	text-decoration: none;
+	text-align: left;
+	font-size: .75em;
+	padding: .375em .875em;
+	color: var(--footer-text-color);
+}
+
+details ul li{
+	text-align: left;
+}
+
+details ul li:last-of-type{
+	margin-bottom: 1em;
+}
+
+/* Verberg het pijltje */
+summary::-webkit-details-marker {
+	display: none;
+}
+  
+:focus{
+	outline: solid #0066cc .3em;
+}
+
+
+
+.homepage footer:nth-of-type(2) nav{
+	display: flex;
+}
+
+.homepage footer:nth-of-type(2) li{
+	list-style-type: none;
+}
+
+.homepage footer:nth-of-type(2) a{
+	text-decoration: none;
+	color: var(--footer-link-color);
+}
+
+/* main van de sign in pagina */
+body .signIn{
+	background-color: white;
+}
+
+main{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+    align-items: center;
+}
+
+main h1{
+	margin-top: 3em;
+	font-size: 1.5em;
+	color: #494949;
+}
+
+.signIn div:nth-of-type(1){
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	border-bottom: solid var(--footer-border-color);
+	padding-bottom: 1em;
+	margin-bottom: 1em;
+}
+
+.signIn input:nth-of-type(1){
+	border: 0.0625em solid #d6d6d6;
+	border-radius: 0.375em;
+	box-shadow: none;
+	width: 20.5em;
+	height: 2.7625em;
+	margin-top: .5em;
+	margin-bottom: 3em;
+}
+
+#remember{
+	height: 1.3em;
+	margin-right: -8em;
+	align-items: right;
+}
+
+.signIn a{
+	color: #0070c9;
+	text-decoration: none;
+	font-size: 0.9em;
+	padding-bottom: .5em;
 }
 
 
 
 
 
-/****************/
-/* JOUW STYLING */
-/****************/
 
-/* jouw code */
+
+/* footer van de sign in pagina */
+.signIn footer{
+	position: absolute;
+	bottom: 0;
+	background-color: var(--footer-background);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: auto;
+    margin-right: auto;
+	width: 100%;
+}
+
+.signIn footer p:nth-of-type(1){
+	color: var(--footer-text-color);
+	font-size: 0.75em;
+	/* width: 61.25em; */
+	/* align-items: center; */
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom: solid var(--footer-border-color);
+	padding-bottom: 1em;
+}
+
+.signIn footer p:nth-of-type(2){
+	color: var(--footer-text-color);
+	font-size: 0.75em;
+	/* width: 61.25em; */
+	/* align-items: center; */
+	margin-top: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	align-items: left;
+}
+
+.signIn footer p:nth-of-type(3){
+	color: var(--footer-text-color);
+
+	font-size: 0.75em;
+	/* width: 61.25em; */
+	/* align-items: center; */
+	margin-top: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	align-items: left;
+}
+
+@media (min-width:55.1875em) {
+	header  > button:nth-of-type(1) {
+		display: none;  
+	  }
+
+	.firstNav  > button {
+	  display: none;  
+	}
+
+	.firstNav  > ul li input  {
+		display: none;  
+	  }
+	
+	.firstNav  {
+	  	position: static;
+	  	transform: none;
+	  	padding: 0em 10em;
+		background: none;  
+		/* height: 50%; */
+	}
+	
+	.firstNav  button {
+	  display: none;  
+	}
+	
+	.firstNav  ul {
+	  display: flex;
+	  gap: 1em;
+	  justify-content: center;  
+	  background: none;
+	}
+	
+	.firstNav  ul li{
+		font-size: .75em;
+		color: var(--color-navbar-text);
+		padding: 1em .5em;
+	}
+
+	.firstNav  ul li a{
+		font-size: .75em;
+		color: var(--color-navbar-text);
+		padding: 1em .5em;
+	  }
+	
+	  
+	.firstNav  a {
+	  flex-direction: column;
+	  border: none;  
+	}
+	
+	.firstNav header > a:last-of-type {
+	  flex-direction: column;	  
+	}
+/* 
+	footer:nth-of-type(2){
+		display: none;
+	} */
+
+  }
+
+
+  /* 2de footer die gemaakt is  */
+/* 
+	footer:nth-of-type(1){
+		display: none;
+	}
+
+	footer:nth-of-type(2){
+		display: block;
+	}
+
+	footer:nth-of-type(2) p{
+		font-size: .75em;	
+		font-weight: bold;
+	}
+
+	footer:nth-of-type(2) ul{
+		margin: 2em;
+	}
+
+	footer:nth-of-type(2) nav ul li{
+		font-size: .75em;	
+	}
+
+	footer:nth-of-type(2) nav ul:nth-of-type(2) li:nth-of-type(9) p{
+		margin-top: 1em;
+	}
+
+	footer:nth-of-type(2) nav ul:nth-of-type(4) li:nth-of-type(4) p{
+		margin-top: 1em;
+	}
+
+	footer:nth-of-type(2) nav ul:nth-of-type(4) li:nth-of-type(7) p{
+		margin-top: 1em;
+	}
+
+	footer:nth-of-type(2) nav ul:nth-of-type(5) li:nth-of-type(6) p{
+		margin-top: 1em;
+	} */
+
+
+
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* verandering naar groot scherm */
+@media (min-width:66.75em) {
+
+	/* laat ze alle 4 de columnen van iphone vergelijking naast elkaar staan bij groot scherm */
+		.homepage section:nth-of-type(5){
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+	
+		.homepage section:nth-of-type(5) p.titel{
+			grid-row-start: 8;
+			grid-column-start: 3;
+			/* text-align: center; */
+		}
+	
+		/* derder column */
+		.homepage section:nth-of-type(5) img:nth-of-type(7){
+			width: 8em;
+			height: 12.75em;
+			grid-row-start: 1;
+			grid-column-start: 3;
+		}
+	
+		.homepage section:nth-of-type(5) img:nth-of-type(8){
+			width: 8.5625em;
+			height: 1.125em;	
+			grid-row-start: 2;
+			grid-column-start: 3;
+		}
+	
+		.homepage section:nth-of-type(5) img:nth-of-type(9){
+			width: 6.0625em;
+			height: 1.25em;	
+			grid-row-start: 3;
+			grid-column-start: 3;
+		}
+	
+		.homepage section:nth-of-type(5) p:nth-of-type(5){	
+			grid-row-start: 4;
+			grid-column-start: 3;
+		}
+	
+		.homepage section:nth-of-type(5) p:nth-of-type(6){	
+			grid-row-start: 5;
+			grid-column-start: 3;
+		}
+	
+		.homepage section:nth-of-type(5) a:nth-of-type(5){
+			text-decoration: none;
+			font-size: .75em;
+			padding: .5em 1em;
+			border-radius: 61.25em;
+			border: none;
+			background-color: rgb(0, 113, 227);
+			color: white;
+			text-align: center;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 1.5em;
+			margin-top: 1.5em;
+			grid-row-start: 6;
+			grid-column-start: 3;
+		}
+	
+		.homepage section:nth-of-type(5) a:nth-of-type(6){
+			color: var(--color-meer-info);
+			text-decoration: none;
+			font-size: .875em;
+			margin-bottom: .75em;
+			grid-row-start: 7;
+			grid-column-start: 3;
+		}
+	
+		/* vierde column */
+		.homepage section:nth-of-type(5) img:nth-of-type(10){
+			width: 7.4375em;
+			height: 12.75em;	
+			grid-row-start: 1;
+			grid-column-start: 4;
+		}
+	
+		.homepage section:nth-of-type(5) img:nth-of-type(11){
+			width: 4.125em;
+			height: 1.125em;	
+			grid-row-start: 2;
+			grid-column-start: 4;
+		}
+	
+		.homepage section:nth-of-type(5) img:nth-of-type(12){
+			width: 6.125em;
+			height: 1.25em;	
+			grid-row-start: 3;
+			grid-column-start: 4;
+		}
+	
+		.homepage section:nth-of-type(5) p:nth-of-type(7){	
+			grid-row-start: 4;
+			grid-column-start: 4;
+		}
+	
+		.homepage section:nth-of-type(5) p:nth-of-type(8){	
+			grid-row-start: 5;
+			grid-column-start: 4;
+		}
+	
+		.homepage section:nth-of-type(5) a:nth-of-type(7){
+			text-decoration: none;
+			font-size: .75em;
+			padding: .5em 1em;
+			border-radius: 61.25em;
+			border: none;
+			background-color: rgb(0, 113, 227);
+			color: white;
+			text-align: center;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 1.5em;
+			margin-top: 1.5em;
+			grid-row-start: 6;
+			grid-column-start: 4;
+		}
+	
+		.homepage section:nth-of-type(5) a:nth-of-type(8){
+			color: var(--color-meer-info);
+			text-decoration: none;
+			font-size: .875em;
+			margin-bottom: .75em;
+			grid-row-start: 7;
+			grid-column-start: 4;
+		}
+	
+		.homepage section {
+			margin-bottom: 1em;
+			display: grid;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+		}
+	
+		.homepage section div{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			align-items: baseline;
+			gap: 2em;
+		}
+	
+		/* section 2: iphone 14 */
+		.homepage section:nth-of-type(2) p:nth-of-type(1){
+			font-size: 1.1em;
+		}
+	
+		.homepage section:nth-of-type(2) img:nth-of-type(1){
+			width: 6.25em;
+			height: 1.3125em;
+			margin-top: 1em;
+		}
+	
+		.homepage section:nth-of-type(2) p:nth-of-type(2){
+			font-size: 3em;
+			font-weight: 600;
+			padding-top: .5em;
+		}
+	
+		.homepage section:nth-of-type(2) p:nth-of-type(3){
+			font-size: 1.3125em;
+			padding-top: 1em;
+		}
+	
+		.homepage section:nth-of-type(2) a:nth-of-type(1){	
+			grid-row-start: 1;
+			grid-column-start: 1;
+			text-align: end;
+			margin-right: 0;
+			width: 20%;
+		}
+	
+		.homepage section:nth-of-type(2) a:nth-of-type(2){	
+			grid-row-start: 1;
+			grid-column-start: 2;
+			text-align: start;
+		}
+	
+		.homepage section:nth-of-type(2) img:nth-of-type(2){
+			width: 48.625em;
+			height: 44.813em;
+		}
+	
+		/* sectiom 3: iphone 14 pro */
+		.homepage section:nth-of-type(3) p:nth-of-type(1){
+			font-size: 1.1em;
+		}
+	
+		.homepage section:nth-of-type(3) p:nth-of-type(2){
+			font-size: 1.5em;
+			margin-top: 1em;
+		}
+	
+		.homepage section:nth-of-type(3) p:nth-of-type(3){
+			font-size: 3em;
+		}
+	
+		.homepage section:nth-of-type(3) p:nth-of-type(4){
+			font-size: 1.4em;
+		}
+		
+		.homepage .homepage section:nth-of-type(3) img:nth-of-type(1){
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+			height: 50%;	
+		}
+		
+	
+		.homepage section:nth-of-type(3) a:nth-of-type(1){	
+			grid-row-start: 1;
+			grid-column-start: 1;
+			text-align: end;
+			margin-right: 0;
+			width: 20%;
+		}
+	
+		.homepage section:nth-of-type(3) a:nth-of-type(2){	
+			grid-row-start: 1;
+			grid-column-start: 2;
+			text-align: start;
+			font-size: 1.3125em;
+		}
+	
+		.homepage section:nth-of-type(3) img:nth-of-type(1){
+			width: 48.875em;
+			height: 33.875em;
+		}
+		
+	
+		.homepage section:nth-of-type(4){
+			background-color: var(--color-background);
+			margin-bottom: 0em;
+		}
+		
+	
+		/* section 4:iphone se */
+		.homepage section:nth-of-type(4){
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			align-items: baseline;
+			gap: 1em;
+		}
+	
+		.homepage section:nth-of-type(4) img:nth-of-type(1){
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 6em;
+			height: 1.3em;
+			grid-row-start: 1;
+			grid-column-start: 1;	
+		}
+	
+		.homepage section:nth-of-type(4) p:nth-of-type(1){
+			font-size: 3em;
+			grid-row-start: 2;
+			grid-column-start: 1;
+		}
+	
+		.homepage section:nth-of-type(4) p:nth-of-type(2){
+			font-size: 1.3em;
+			grid-row-start: 3;
+			grid-column-start: 1;
+		}
+
+		.homepage section:nth-of-type(4) p:nth-of-type(3){
+			font-size: 3em;
+			grid-row-start: 5;
+			grid-column: 1 / 3;
+		}
+
+		.homepage section:nth-of-type(4) .nietNaastElkaar{
+			grid-row-start: 4;
+			grid-column-start: 1;
+		}
+			
+		.homepage section:nth-of-type(4) img:nth-of-type(2){
+			width: 30.875em;
+			height: 51.875em;
+			grid-row: 1 / 4;			
+			grid-column-start: 2;
+		}
+	
+		/* .homepage section 6: geef WOW */
+		.homepage section:nth-of-type(6){
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			align-items: center;
+			gap: 1em;
+		}
+		.homepage section:nth-of-type(6) p:nth-of-type(1){
+			color: white;
+			font-size: 3em;
+			grid-row-start: 2;
+			grid-column-start: 1;
+		}
+	
+		.homepage section:nth-of-type(6) a:nth-of-type(1){
+			font-size: 1.3em;
+			margin-top: .5625em;
+			grid-row-start: 3;
+			grid-column-start: 1;
+		}
+	
+		.homepage section:nth-of-type(6) img:nth-of-type(1){
+			width: 6.625em;
+			height: 6.625em;	
+			grid-row-start: 1;
+			grid-column-start: 1;
+		}
+	
+		.homepage section:nth-of-type(6) img:nth-of-type(2){
+			width: 27.375em;
+			height: 27.375em;		
+			grid-row: 1 / 4;
+			grid-column-start: 2;
+		}
+	
+	
+		/* .homepage section 8: ruil je smartphone in voor een tegoed */
+		.homepage section:nth-of-type(8){
+			margin: 3%;
+		}
+
+		.homepage section:nth-of-type(8) p:nth-of-type(1){
+			margin: 2.5em;
+			font-size: 3em;
+			font-weight: 600;
+		}
+	
+		.homepage section:nth-of-type(8) p:nth-of-type(2){
+			font-size: 1.3em;
+			margin: 1.25em 25%;
+		}
+	
+		.homepage section:nth-of-type(8) img:nth-of-type(1){
+			/* width: 25.187em;
+			height: 29.5em;	 */
+			width: 50%;
+			height: 100%;	
+			margin-right: 0;
+
+			object-position: left 13em top 1em;
+		}
+	
+		.homepage section:nth-of-type(8) a:nth-of-type(1){
+			color: var(--color-meer-info);
+			text-decoration: none;
+			font-size: 1.3em;
+			margin-top: .8125em;
+			margin-bottom: 2.25em;
+		}
+
+
+	/* section 9: waarom je iphone */
+	.homepage section:nth-of-type(9){
+		margin: 3%;
+	}
+
+	.homepage section:nth-of-type(9){
+		/* background-image: url("./images/body/why_apple__ezn1ktvka6oi_large.jpg"); */
+		background-image: url("../images/body/why_apple__ezn1ktvka6oi_large.jpg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.homepage section:nth-of-type(9) p:nth-of-type(1){
+		margin: 2.5em;
+		font-weight: 700;
+		margin: 1.25em 25%;
+	}
+
+	.homepage section:nth-of-type(9) p:nth-of-type(2){
+		font-size: 1.3em;
+		margin: 1.25em 25%;
+	}
+
+	.homepage section:nth-of-type(9) a:nth-of-type(1){
+		font-size: 1.3em;
+	}
+
+
+	/* .homepage section 11: magSave  */
+	.homepage section:nth-of-type(11){
+		margin: 3%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		gap: 1em;
+	}
+
+	.homepage section:nth-of-type(11) p:nth-of-type(1){
+		font-size: 3em;
+		grid-row-start: 1;
+		grid-column-start: 1;
+		margin-bottom: .1em;
+	}
+
+	.homepage section:nth-of-type(11) p:nth-of-type(2){
+		font-size: 1.3em;
+		grid-row-start: 2;
+		grid-column-start: 1;
+	}
+
+	.homepage section:nth-of-type(11) a:nth-of-type(1) {
+		font-size: 1.3em;
+		grid-row-start: 3;
+		grid-column-start: 1;
+	}
+	
+	.homepage section:nth-of-type(11) img:nth-of-type(1){
+		width: 14.5625em;
+		height: 11.375em;	
+		grid-row: 1 / 4;
+		grid-column-start: 2;
+	}
+
+	/* .homepage section 12: AirTag */
+	.homepage section:nth-of-type(12){
+		margin: 3%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		gap: 1em;
+	}
+	.homepage section:nth-of-type(12) img:nth-of-type(1){
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		grid-row: 1 / 4;
+		grid-column-start: 1;
+	}
+
+	.homepage section:nth-of-type(12) p:nth-of-type(1) {
+		font-size: 3em;
+		grid-row-start: 1;
+		grid-column-start: 2;
+	}
+
+	.homepage section:nth-of-type(12) p:nth-of-type(2) {
+		font-size: 1.3em;
+		grid-row-start: 2;
+		grid-column-start: 2;
+	}
+
+	.homepage section:nth-of-type(12) .naastElkaar{
+		grid-row-start: 3;
+		grid-column-start: 2;
+	}
+
+	.homepage section:nth-of-type(12) .naastElkaar a{
+		font-size: 1.3em;
+	}
+	
+	/* .homepage section 13: airpods  */
+	.homepage section:nth-of-type(13){
+		margin: 3%;	
+	}
+
+	.homepage section:nth-of-type(13) p:nth-of-type(1){
+		font-size: 3em;
+	}
+
+	.homepage section:nth-of-type(13) p:nth-of-type(2){
+		font-size: 1.3em;
+	}
+
+	.homepage section:nth-of-type(13) a:nth-of-type(1){
+		font-size: 1.3em;
+	}
+
+	.homepage section:nth-of-type(13) img:nth-of-type(1){
+		width: 100%;
+		height: 100%;
+	}
+
+
+	/* .homepage section 14: bestelling/ bezorging */
+	.homepage section:nth-of-type(14){
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		gap: 1em;
+	}
+	
+	.homepage section:nth-of-type(14) a:nth-of-type(1){
+		font-size: 1.5em;
+		grid-row-start: 1;
+		grid-column: 1 / 3;
+	}
+
+	.homepage section:nth-of-type(14) img:nth-of-type(1){
+		width: 3.1875em;
+		height: 4.6875em;	
+		grid-row-start: 2;
+		grid-column-start: 1;
+	}
+
+	.homepage section:nth-of-type(14) p:nth-of-type(1){
+		font-size: 1.3em;
+		grid-row-start: 3;
+		grid-column-start: 1;
+	}
+
+	.homepage section:nth-of-type(14) p:nth-of-type(2){
+		font-size: 1.3em;
+		grid-row-start: 4;
+		grid-column-start: 1;
+	}
+
+	.homepage section:nth-of-type(14) a:nth-of-type(2){
+		font-size: 1.3em;
+		grid-row-start: 5;
+		grid-column-start: 1;
+	}
+
+
+	.homepage section:nth-of-type(14) img:nth-of-type(2){
+		width: 1.136em;
+		height: 4.6875em;	
+		grid-row-start: 2;
+		grid-column-start: 2;
+	}
+	
+	.homepage section:nth-of-type(14) p:nth-of-type(3){
+		font-size: 1.3em;
+		grid-row-start: 3;
+		grid-column-start: 2;
+	}
+	
+	.homepage section:nth-of-type(14) p:nth-of-type(4){
+		font-size: 1.3em;
+		grid-row-start: 4;
+		grid-column-start: 2;
+	}
+	
+	.homepage section:nth-of-type(14) a:nth-of-type(3){
+		font-size: 1.3em;
+		grid-row-start: 5;
+		grid-column-start: 2;
+	}
+	
+	.homepage section:nth-of-type(14) p:nth-of-type(5){
+		font-size: 3.5em;
+		grid-row-start: 6;
+		grid-column: 1 / 3;
+	}
+
+	/* .homepage section 15: ios 16 */
+	.homepage section:nth-of-type(15){
+		margin: 3%;
+	}
+
+	.homepage section:nth-of-type(15) p:nth-of-type(1){
+		font-size: 3em;
+		font-weight: 600;
+	}
+
+	.homepage section:nth-of-type(15) p:nth-of-type(2){
+		font-size: 1.3em;
+	}
+
+	.homepage section:nth-of-type(15) a:nth-of-type(1){
+		font-size: 1.3em;
+	}
+
+	.homepage section:nth-of-type(15) img:nth-of-type(1){
+		width: 100%;
+		height: 100%;
+	}
+
+	/* .homepage section 16: privacy */
+	.homepage section:nth-of-type(16){
+		margin: 3%;
+		height: 100%;
+	}
+
+	.homepage section:nth-of-type(16) p:nth-of-type(1){
+		font-size: 3em;	
+		font-weight: 600;
+		margin-top: .3em;
+		margin-bottom: 0em;
+}
+
+	.homepage section:nth-of-type(16) a:nth-of-type(1){
+		color: white;
+		font-size: 1.1em;
+		text-decoration: none;
+		margin-bottom: 16.25em;
+	}
+
+
+	/* .homepage section 18: apple one */
+	.homepage section:nth-of-type(18){
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		gap: 1em;
+		margin: 3%;
+	}
+
+	.homepage section:nth-of-type(18) img:nth-of-type(1){
+		width: 19.812em;
+		height: 6.25em;	
+		grid-row-start: 1;
+		grid-column-start: 2;
+	}
+
+	.homepage section:nth-of-type(18) p:nth-of-type(1){
+		font-size:  1.75em;
+		font-weight: 600;
+		grid-row-start: 2;
+		grid-column-start: 2;
+	}
+
+	.homepage section:nth-of-type(18) div{
+		grid-row-start: 3;
+		grid-column-start: 2;
+	}
+
+	.homepage section:nth-of-type(18) a:nth-of-type(1){
+		font-size: 1.3em;
+	}
+
+	.homepage section:nth-of-type(18) a:nth-of-type(2){
+		font-size: 1.3em;
+	}
+
+	.homepage section:nth-of-type(18) img:nth-of-type(2){
+		width: 25.562em;
+		height: 22.187em;	
+		grid-row: 1 / 4;
+		grid-column-start: 1;
+	}
+
+
+	/* .homepage section 19: apple tv +  */
+	.homepage section:nth-of-type(19){
+		margin: 3%;
+	}
+
+	.homepage section:nth-of-type(19) img:nth-of-type(1){
+		width: 6.125em;
+		height: 2.437em;	
+	}
+
+	.homepage section:nth-of-type(19) p:nth-of-type(1){
+		font-size: 1.3em;
+	}
+
+	.homepage section:nth-of-type(19) a{
+		font-size: 1.3em;
+	}
+
+	/* .musicArcadeNaastElkaar{
+				display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		gap: 1em;
+		margin: 3%;
+	} */
+
+
+	/* .homepage section 20: apple music */
+	.homepage div section:nth-of-type(1){
+		background-color: #C0EEF3;
+		margin: 3%;
+	}
+
+	.homepage div section:nth-of-type(1) img:nth-of-type(1){
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 40%;
+		height: 40%;	
+		margin: 1em;
+	}
+
+
+	.homepage div section:nth-of-type(1) a{
+		color: var(--color-meer-info-donker);
+		text-decoration: none;
+		font-size: 1.1em;
+		margin-top: 1em;
+		margin-bottom: 2em;
+	}
+
+	.homepage div section:nth-of-type(1) img:nth-of-type(2){
+		width: 60%;
+		height: 60%;
+		margin-bottom: 2em;	
+	}
+
+
+	/* .homepage section 21: apple arcade */
+	.homepage div section:nth-of-type(2){
+		margin: 3%;
+		display: grid;
+		grid-template-columns: 1fr;
+		align-items: center;
+		gap: 1em;
+	}
+
+	.homepage div section:nth-of-type(2) img:nth-of-type(1){
+		width: 7.25em;
+		height: 1.625em;	
+		grid-row-start: 1;
+		grid-column-start: 1;
+	}
+
+	.homepage div section:nth-of-type(2) p:nth-of-type(1){
+		font-size: 1.1em;
+		grid-row-start: 2;
+		grid-column-start: 1;
+	}
+
+	.homepage div section:nth-of-type(2) .naastElkaar{
+		font-size: 1.1em;
+		grid-row-start: 3;
+		grid-column-start: 1;
+		gap: 1em;
+	}
+	.homepage section:nth-of-type(2) .naastElkaar a:nth-of-type(1){
+		width: 100%;
+		color: var(--color-meer-info);
+		text-decoration: none;
+		font-size: 1.1875em;
+		margin-bottom: 2.25em;
+	}
+
+	.homepage div section:nth-of-type(2) img:nth-of-type(2){
+		width: 100%;
+		height: 100%;	
+		grid-row-start: 4;
+		grid-column-start: 1;
+	}
+
+	div:nth-of-type(1){
+		display: flex;
+		flex-direction: row;
+	}
+
+		
+	/* .homepage section 22: apple gift card  */
+
+	/* veranderd naar nth 20 voor aanpassing div  */
+	.homepage section:nth-of-type(20){
+		margin: 3%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		gap: 1em;
+	}
+
+
+	.homepage section:nth-of-type(20) img:nth-of-type(1){
+		width: 8.5em;
+		height: 1.5625em;	
+		grid-row-start: 1;
+		grid-column-start: 1;
+	}
+
+	.homepage section:nth-of-type(20) p:nth-of-type(1){
+		width: 8.5em;
+		height: 1.5625em;	
+		grid-row-start: 2;
+		grid-column-start: 1;
+	}
+
+	.homepage section:nth-of-type(20) .naastElkaar{
+		font-size: 1.1em;
+		grid-row-start: 3;
+		grid-column-start: 1;
+	}
+
+	.homepage section:nth-of-type(20) img:nth-of-type(2){
+		width: 70%;
+		height: 70%;
+		grid-row: 1 / 3;
+		grid-column-start: 2;	
+	}
+
+	
+}
+	
+	
+	
 

@@ -19,7 +19,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Leon Zethof
 
   #### Je startniveau:
-  Rood
+  blauw
 
   #### Je focus:
   surface plane
@@ -39,11 +39,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   https://www.apple.com/nl/iphone/
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="iphone 14 pagina">
+  <img src="readme-images/iphone-screen-1.png" width="375px" alt="iphone 14 pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="iphone 14 detail pagina">
+  <img src="readme-images/sign-in-page.png" width="375px" alt="sign in page">
  
 </details>
 
@@ -56,30 +56,23 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+  -alles is tab baar
+  -letters groot genoeg
+
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Een screenreader leest voor wat er op je beeldscherm staat voor mensen die niet goed kunnen zien.
+  Door alternatieve teksten naast plaatjes en dingen in het menu te zetten kan de screen reader het uitlezen
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Alles dat aan moet worden geklikt moet ook echt aan kunnen worden geklikt met een muis.
+  Door een focus state toe te voegen aan de klikbare objecten kan er goed worden gezien op welk element gefocust word als er met de tab knop door het document heen word gehaald.
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Voor de mensen waarvan de motoriek gehinderd word is het belangrijk dat ze ook nogsteeds de website kunnen bedienen, dit door kan gedaan worden door alle objecten genoeg ruimte te geven en tabbaar te maken.
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Sommige mensen hebben een visuele beperking en hier kan rekening mee worden door het contrast goed te houden en ervoor zorgen dat het lettertype groot genoeg is en er alternatieve plaatjes zijn voor kleurenblinden.
 </details>
 
 
@@ -90,13 +83,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 2e werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="readme-images/breakdownschets-1.png" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="readme-images/breakdownschets-2.png" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/breakdownschets-3.png" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -116,18 +109,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | LEon zethof    | Quintijn           | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | grid en footer | hoeveel ik van je  | en ik dit    | en dan ik dat    |
+  | en dat ook nog | hou                | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
+  - niet alles door elkaar heen doen
+  - meer info volgende week
   - nog een punt
   - ...
 
@@ -149,17 +142,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Leon zethof    | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | grid            | en dit             | en ik dit    | en dan ik dat    |
+  | navbar          | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
+  - alles gaat goed, ziet er goed uit
   - punt 2
   - nog een punt
 - ...
@@ -176,32 +169,26 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 8e werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  Lijst met je bevindingen die in de test naar voren kwamen:
+  -alles is tab baar
+  -letters groot genoeg
+
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Een screenreader leest voor wat er op je beeldscherm staat voor mensen die niet goed kunnen zien.
+  Door alternatieve teksten naast plaatjes en dingen in het menu te zetten kan de screen reader het uitlezen
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Alles dat aan moet worden geklikt moet ook echt aan kunnen worden geklikt met een muis.
+  Door een focus state toe te voegen aan de klikbare objecten kan er goed worden gezien op welk element gefocust word als er met de tab knop door het document heen word gehaald.
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Voor de mensen waarvan de motoriek gehinderd word is het belangrijk dat ze ook nogsteeds de website kunnen bedienen, dit door kan gedaan worden door alle objecten genoeg ruimte te geven en tabbaar te maken.
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Sommige mensen hebben een visuele beperking en hier kan rekening mee worden door het contrast goed te houden en ervoor zorgen dat het lettertype groot genoeg is en er alternatieve plaatjes zijn voor kleurenblinden.
 </details>
+
 
 
 
@@ -214,14 +201,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  werk gaat goed, ga zo door.
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Leon zethof    | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
+  | footer uitklappen | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
@@ -229,7 +216,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
+  - leon is goed bezig
   - punt 2
   - nog een punt
   - ...
@@ -246,19 +233,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/eind-3.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  ik heb veel geleerd over grid en display flex en ben daar trots op
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/eind-1.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  soms was het lastig om plaatjes goed te zetten
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/eind-2.png" width="375px" alt="bummer">
 </details>
 
 
@@ -272,8 +259,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. https://codepen.io/robertspier/pen/oNyPEmv?editors=0100
+  2. https://codepen.io/robertspier/pen/GRGzYEG?editors=0110
+  3. https://codepen.io/shooft/pen/NWYObMy
 
 </details>

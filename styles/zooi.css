@@ -1,0 +1,121 @@
+	
+
+	/* eerste column */
+	.homepage section:nth-of-type(5) img:nth-of-type(1){
+		width: 151px;
+		height: 204px;	
+		grid-row-start: 1;
+		grid-column-start: 1;
+	}
+
+	.homepage section:nth-of-type(5) img:nth-of-type(2){
+		width: 92px;
+		height: 18px;	
+		grid-row-start: 2;
+		grid-column-start: 1;
+	}
+
+	.homepage section:nth-of-type(5) img:nth-of-type(3){
+		width: 137px;
+		height: 20px;	
+		grid-row-start: 3;
+		grid-column-start: 1;
+	}
+
+	.homepage section:nth-of-type(5) p:nth-of-type(1){	
+		grid-row-start: 4;
+		grid-column-start: 1;
+	}
+
+	.homepage section:nth-of-type(5) p:nth-of-type(2){	
+		grid-row-start: 5;
+		grid-column-start: 1;
+	}
+
+	.homepage section:nth-of-type(5) button:nth-of-type(1){
+		text-decoration: none;
+		font-size: 12px;
+		padding: 8px 16px;
+		border-radius: 980px;
+		border: none;
+		background-color: rgb(0, 113, 227);
+		color: white;
+		text-align: center;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 1.5em;
+		margin-top: 1.5em;
+		grid-row-start: 6;
+		grid-column-start: 1;
+	}
+
+	.homepage section:nth-of-type(5) a:nth-of-type(1){
+		color: var(--color-meer-info);
+		text-decoration: none;
+		font-size: 14px;
+		margin-bottom: 12px;
+		grid-row-start: 7;
+		grid-column-start: 1;
+	}
+
+
+
+	/* tweede  column */
+	.homepage section:nth-of-type(5) img:nth-of-type(4){
+		width: 143px;
+		height: 204px;	
+		grid-row-start: 1;
+		grid-column-start: 2;
+	}
+
+	.homepage section:nth-of-type(5) img:nth-of-type(5){
+		width: 114px;
+		height: 18px;
+		grid-row-start: 2;
+		grid-column-start: 2;	
+	}
+
+	.homepage section:nth-of-type(5) img:nth-of-type(6){
+		width: 98px;
+		height: 20px;
+		grid-row-start: 3;
+		grid-column-start: 2;	
+	}
+
+	.homepage section:nth-of-type(5) p:nth-of-type(3){	
+		grid-row-start: 4;
+		grid-column-start: 2;
+	}
+
+	.homepage section:nth-of-type(5) p:nth-of-type(4){	
+		grid-row-start: 5;
+		grid-column-start: 2;
+	}
+
+	.homepage section:nth-of-type(5) button:nth-of-type(2){
+		text-decoration: none;
+		font-size: 12px;
+		padding: 8px 16px;
+		border-radius: 980px;
+		border: none;
+		background-color: rgb(0, 113, 227);
+		color: white;
+		text-align: center;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 1.5em;
+		margin-top: 1.5em;
+		grid-row-start: 6;
+		grid-column-start: 2;
+	}
+
+	.homepage section:nth-of-type(5) a:nth-of-type(2){
+		color: var(--color-meer-info);
+		text-decoration: none;
+		font-size: 14px;
+		margin-bottom: 12px;
+		grid-row-start: 7;
+		grid-column-start: 2;
+	}
